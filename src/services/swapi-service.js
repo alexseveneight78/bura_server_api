@@ -1,4 +1,4 @@
-//const fetch = require('node-fetch');
+const fetch = require('node-fetch');
 
 export default class SwapiService {
   _apiBase = 'https://swapi.dev/api';
@@ -26,7 +26,7 @@ export default class SwapiService {
     return res.results;
   }
   getPlanet(id){
-    return this.getResource(`/planet/${id}/`)
+    return this.getResource(`/planets/${id}/`)
   }
 
   async getAllStarships() {
